@@ -1,6 +1,6 @@
-from django.http import HttpResponse
-from django.template import loader
+from django.shortcuts import render
 
-def connexion(request):
-  template = loader.get_template('accueil.html')
-  return HttpResponse(template.render())
+# Create your views here.
+
+def home(request):
+    return render(request, "home.html", {})
