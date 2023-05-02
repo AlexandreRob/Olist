@@ -127,7 +127,7 @@ class State(models.Model):
 
 class ZipCode(models.Model):
     zip_code_id = models.IntegerField(primary_key=True)
-    zip_code_name = models.IntegerField(blank=True, null=True)
+    zip_code_name = models.CharField(blank=True, null=True, max_length=50)
     location = models.ForeignKey(Location, models.DO_NOTHING)
 
     class Meta:
